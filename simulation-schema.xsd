@@ -1,0 +1,68 @@
+<?xml version="1.1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="simulation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="years">
+                    <xs:complexType>
+                        <xs:attribute name="quantity" type="xs:unsignedInt"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="months">
+                    <xs:complexType>
+                        <xs:attribute name="quantity" type="xs:unsignedInt"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="days">
+                    <xs:complexType>
+                        <xs:attribute name="quantity" type="xs:unsignedInt"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="routes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="route" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="route">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="routeType"/>
+                <xs:element name="stops">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="stop" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="buses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="bus" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="interval" type="xs:unsignedInt" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="stop">
+        <xs:complexType>
+            <xs:attribute name="time" type="xs:unsignedInt"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="bus">
+        <xs:complexType>
+            <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="routeType">
+        <xs:complexType>
+           <xs:attribute name="type" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simulation  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../resources/simulation-schema.xsd">
+    <years quantity="0"/>
+    <months quantity="3"/>
+    <days quantity="0"/>
+    <routes>
+        <route interval="5">
+            <routeType type="straight"/>
+            <stops>
+                <stop time="5"/>
+                <stop time="8"/>
+                <stop time="5"/>
+                <stop time="7"/>
+                <stop time="10"/>
+                <stop time="10"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="30"/>
+                <bus size="25"/>
+                <bus size="30"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="4"/>
+                <stop time="7"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="7">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="7"/>
+                <stop time="7"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="30"/>
+                <bus size="20"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="10">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="7"/>
+                <stop time="5"/>
+                <stop time="9"/>
+                <stop time="11"/>
+                <stop time="7"/>
+                <stop time="8"/>
+            </stops>
+            <buses>
+                <bus size="20"/>
+                <bus size="30"/>
+                <bus size="25"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="straight"/>
+            <stops>
+                <stop time="5"/>
+                <stop time="8"/>
+                <stop time="5"/>
+                <stop time="7"/>
+                <stop time="10"/>
+                <stop time="10"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="30"/>
+                <bus size="25"/>
+                <bus size="30"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="4"/>
+                <stop time="7"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="7">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="7"/>
+                <stop time="7"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="30"/>
+                <bus size="20"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="10">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="7"/>
+                <stop time="5"/>
+                <stop time="9"/>
+                <stop time="11"/>
+                <stop time="7"/>
+                <stop time="8"/>
+            </stops>
+            <buses>
+                <bus size="20"/>
+                <bus size="30"/>
+                <bus size="25"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="straight"/>
+            <stops>
+                <stop time="5"/>
+                <stop time="8"/>
+                <stop time="5"/>
+                <stop time="7"/>
+                <stop time="10"/>
+                <stop time="10"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="30"/>
+                <bus size="25"/>
+                <bus size="30"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="4"/>
+                <stop time="7"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="7">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="7"/>
+                <stop time="7"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="30"/>
+                <bus size="20"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="10">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="7"/>
+                <stop time="5"/>
+                <stop time="9"/>
+                <stop time="11"/>
+                <stop time="7"/>
+                <stop time="8"/>
+            </stops>
+            <buses>
+                <bus size="20"/>
+                <bus size="30"/>
+                <bus size="25"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="straight"/>
+            <stops>
+                <stop time="5"/>
+                <stop time="8"/>
+                <stop time="5"/>
+                <stop time="7"/>
+                <stop time="10"/>
+                <stop time="10"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="30"/>
+                <bus size="25"/>
+                <bus size="30"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="4"/>
+                <stop time="7"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="7">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="7"/>
+                <stop time="7"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="30"/>
+                <bus size="20"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="10">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="7"/>
+                <stop time="5"/>
+                <stop time="9"/>
+                <stop time="11"/>
+                <stop time="7"/>
+                <stop time="8"/>
+            </stops>
+            <buses>
+                <bus size="20"/>
+                <bus size="30"/>
+                <bus size="25"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="straight"/>
+            <stops>
+                <stop time="5"/>
+                <stop time="8"/>
+                <stop time="5"/>
+                <stop time="7"/>
+                <stop time="10"/>
+                <stop time="10"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="30"/>
+                <bus size="25"/>
+                <bus size="30"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="4"/>
+                <stop time="7"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="7">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="7"/>
+                <stop time="7"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="30"/>
+                <bus size="20"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="10">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="7"/>
+                <stop time="5"/>
+                <stop time="9"/>
+                <stop time="11"/>
+                <stop time="7"/>
+                <stop time="8"/>
+            </stops>
+            <buses>
+                <bus size="20"/>
+                <bus size="30"/>
+                <bus size="25"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="straight"/>
+            <stops>
+                <stop time="5"/>
+                <stop time="8"/>
+                <stop time="5"/>
+                <stop time="7"/>
+                <stop time="10"/>
+                <stop time="10"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="30"/>
+                <bus size="25"/>
+                <bus size="30"/>
+            </buses>
+        </route>
+        <route interval="5">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="4"/>
+                <stop time="7"/>
+            </stops>
+            <buses>
+                <bus size="25"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="7">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="3"/>
+                <stop time="6"/>
+                <stop time="9"/>
+                <stop time="7"/>
+                <stop time="7"/>
+                <stop time="10"/>
+            </stops>
+            <buses>
+                <bus size="30"/>
+                <bus size="20"/>
+                <bus size="35"/>
+            </buses>
+        </route>
+        <route interval="10">
+            <routeType type="circular"/>
+            <stops>
+                <stop time="7"/>
+                <stop time="5"/>
+                <stop time="9"/>
+                <stop time="11"/>
+                <stop time="7"/>
+                <stop time="8"/>
+            </stops>
+            <buses>
+                <bus size="20"/>
+                <bus size="30"/>
+                <bus size="25"/>
+            </buses>
+        </route>
+    </routes>
+</simulation>

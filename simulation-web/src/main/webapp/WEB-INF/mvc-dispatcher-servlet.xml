@@ -1,0 +1,81 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <!-- Activates various annotations to be detected in bean classes -->
+    <context:annotation-config/>
+    <!-- Scans the classpath for annotated components that will be auto-registered as Spring beans. -->
+    <context:component-scan base-package="com.stasuma"/>
+    <!-- For search .properties files -->
+    <context:property-placeholder properties-ref="deployProperties"/>
+    <mvc:resources mapping="/resources/**" location="/resources/" cache-period="2"/>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- Search jsp pages -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- Database Information -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${db.driver}"/>
+        <property name="url" value="${db.url}"/>
+        <property name="username" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+    </bean>
+
+    <!-- Hibernate 5 SessionFactory Bean definition -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.stasuma.model.Model</value>
+                <value>com.stasuma.model.Route</value>
+                <value>com.stasuma.model.Stop</value>
+                <value>com.stasuma.model.User</value>
+                <value>com.stasuma.model.SimulationInfo</value>
+                <value>com.stasuma.model.Bus</value>
+                <value>com.stasuma.model.SimulationWorkTimeWeb</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="deployProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="/WEB-INF/app.properties"/>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10000"/>
+    </bean>
+
+    <bean id="stopDao" class="com.stasuma.dao.impl.StopWebDaoImpl"/>
+    <bean id="routeDao" class="com.stasuma.dao.impl.RouteWebDaoImpl"/>
+    <bean id="userDao" class="com.stasuma.dao.impl.UserDaoImpl"/>
+    <bean id="simulationInfoDao" class="com.stasuma.dao.impl.SimulationWebInfoDaoImpl"/>
+    <bean id="simulationWorkTimeDao" class="com.stasuma.dao.impl.SimulationWebWorkTimeDaoImpl"/>
+    <bean id="busDao" class="com.stasuma.dao.impl.BusWebDaoImpl"/>
+    <bean id="simulationNetwork" class="com.stasuma.objects.Network"/>
+    <mvc:default-servlet-handler/>
+    <mvc:annotation-driven/>
+
+</beans>
